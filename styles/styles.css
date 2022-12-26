@@ -262,6 +262,8 @@ select.minimal:focus {
   width: 100px;
   height: 100px;
   border: 1px solid #e9e9e9;
+  display: flex;
+  align-items: center;
 }
 
 .image-container img {
@@ -823,6 +825,72 @@ select.minimal:focus {
 
 .middle-left-vacancy div a {
   color: #2C41FF;
+}
+
+/*======================= Delivery =========================*/
+
+.delivery-body {
+  margin-top: 20px;
+}
+
+.delivery-search {
+  width: 450px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.delivery-search svg {
+  position: absolute;
+  color: #C0262E;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.delivery-search input {
+  width: 450px;
+  background: #FFFFFF;
+  border: 1px solid #DCDCDC;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.search-result {
+  margin-top: 20px;
+}
+
+.search-item {
+  margin-top: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 20px 0;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.search-item h4 {
+  color: #C0262E;
+  font-size: 1.2rem;
+}
+
+.search-item p {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.search-item p span {
+  color: #C0262E;
+}
+
+.search-item .search-side {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-side > div {
+  width: 50%;
 }
 
 @media (min-width: 1600px) {
