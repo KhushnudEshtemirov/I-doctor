@@ -86,7 +86,7 @@ select.minimal:focus {
 
 .left-side {
   position: fixed;
-  width: 220px;
+  width: 250px;
   padding-right: 10px;
 }
 
@@ -142,7 +142,7 @@ select.minimal:focus {
 }
 
 .right-side {
-  margin-left: 220px;
+  margin-left: 250px;
   width: 100%;
 }
 
@@ -165,7 +165,6 @@ select.minimal:focus {
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  /* border: 1px solid red; */
 }
 
 .language img {
@@ -230,6 +229,7 @@ select.minimal:focus {
 
 .body-top h2 {
   color: #C0262E;
+  margin-top: 10px;
 }
 
 .medicine-top {
@@ -248,32 +248,52 @@ select.minimal:focus {
 
 .body-middle {
   margin: 22px 0;
-  padding: 10px;
-  border: 1px solid #DADADA;
+  padding: 20px;
   border-radius: 15px;
   display: flex;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .middle-left {
   padding-right: 15px;
-  border-right: 1px solid #DADADA;
+}
+
+.middle-left .image-container {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #e9e9e9;
+}
+
+.image-container img {
+  width: 100%;
 }
 
 .middle-left h2 {
   color: #444444;
 }
 
-.middle-left div {
-  margin-top: 20px;
-  margin-left: 10px;
-  font-weight: 700;
+.middle-left .icons {
+  margin-top: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.middle-left div svg {
-  margin-right: 12px;
-  font-size: 22px;
+.middle-left .icons div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  background: #ececec96;
+  cursor: pointer;
+}
+
+.middle-left .icons div svg {
+  font-size: 20px;
+  color: rgb(205, 205, 205);
 }
 
 .middle-left div:nth-child(4) * {
@@ -295,35 +315,61 @@ select.minimal:focus {
 .middle-right p {
   padding: 10px 0;
   font-weight: 500;
-  border-bottom: 1px solid #DADADA;
+  color: #848484;
 }
 
-.middle-right > div {
-  padding: 18px 0;
+.middle-right .cart-title h2 a {
+  color: #000;
+  transition: 0.2s;
+}
+
+.middle-right .cart-title h2 a:hover {
+  color: #2C41FF;
+}
+
+.middle-right .cart-btns {
   display: flex;
+  gap: 10px;
+  margin: 20px 0;
 }
 
-.middle-right > div ul {
-  flex: 1;
+.middle-right .cart-btns button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #5c5c5c;
 }
 
-.middle-right > div ul:first-child {
-  border-right: 1px solid #DADADA;
+.middle-right .cart-btns button:first-child {
+  background: rgba(230, 230, 230, 0.25);
 }
 
-.middle-right > div ul:last-child {
-  padding-left: 34px;
+.middle-right .cart-btns button:last-child {
+  background: rgba(223, 142, 142, 0.153);
+  border: 1px solid #fcd2d2b9;
+  color: #F75C61;
 }
 
-.middle-right > div ul li {
-  font-weight: 500;
-  margin-top: 6px;
+.middle-right .cart-btns button:last-child:hover {
+  background: rgba(251, 223, 223, 0.773);
 }
 
-.middle-right > div ul li:first-child {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 18px;
+.middle-right .contact {
+  display: flex;
+  gap: 40px;
+}
+
+.middle-right .contact div div {
+  margin: 20px 0;
+}
+
+.middle-right > div svg {
+  color: #6C6C6C;
+  font-size: 1.4rem;
+  margin-right: 10px;
 }
 
 .body-ads {
@@ -337,7 +383,7 @@ select.minimal:focus {
 }
 
 .right-right {
-  width: 23%;
+  width: 25%;
 }
 
 .news-place {
@@ -402,9 +448,9 @@ select.minimal:focus {
   margin: 22px 0;
   margin-bottom: 40px;
   padding: 10px;
-  border: 1px solid #DADADA;
   border-radius: 15px;
   display: flex;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .doctor-cart {
@@ -650,17 +696,146 @@ select.minimal:focus {
   background: #43FF3F;
 }
 
+/*========================== Online Consult ============================*/
+
+.consult-doctor .doctor-cart {
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 20px 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.cart-header {
+  padding: 20px 15px;
+  background: #F7FAFE;
+}
+
+.cart-body {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+}
+
+.cart-body .image-doctor {
+  margin-right: 20px;
+}
+
+.cart-body .image-doctor img {
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.cart-body .cart-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cart-detail h3 a {
+  color: #363636;
+}
+
+.cart-detail h3 a:hover {
+  color: #2C41FF;
+}
+
+.cart-body .cart-detail .experience {
+  display: flex;
+  margin: 10px 0;
+}
+
+.stars img {
+  width: 20px;
+}
+
+.experience p {
+  margin-left: 15px;
+}
+
+.cart-detail .skill {
+  margin-top: 20px;
+}
+
+.cart-body .select-btn {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+.select-btn button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+  background: transparent;
+}
+
+.doctor-cart:hover .select-btn button {
+  background: #2C41FF;
+  color: #fff;
+}
+
+.cart-footer {
+  margin: 0 20px;
+  margin-top: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e09f;
+}
+
+.cart-footer a {
+  font-size: 0.9rem;
+}
+
+.cart-footer a:hover {
+  color: #2C41FF;
+}
+
+/*=========================== Vacancy ===========================*/
+
+.middle-left-vacancy h2 {
+  color: rgba(0, 0, 0, 0.891);
+  font-size: 1.7rem;
+}
+
+.middle-left-vacancy div {
+  display: flex;
+  gap: 5px;
+  margin: 20px 0;
+} 
+.middle-left-vacancy div p {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #C0262E;
+}
+
+.middle-left-vacancy div span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.middle-left-vacancy div a {
+  color: #2C41FF;
+}
+
 @media (min-width: 1600px) {
   html {
     font-size: 18px;
   }
 
   .left-side {
-    width: 280px;
+    width: 300px;
   }
 
   .right-side {
-    margin-left: 280px;
+    margin-left: 300px;
   }
 }
 
